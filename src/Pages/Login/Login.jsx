@@ -5,15 +5,12 @@ import './Login.css';
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Logging in with:', { emailOrPhone, password });
-
-    // TODO: Add real authentication here
-    // After login, navigate to Home page
-    navigate('/home');
+    console.log('Demo login:', { emailOrPhone, password });
+    navigate('/home');  // Go to Home page on click
   };
 
   return (
