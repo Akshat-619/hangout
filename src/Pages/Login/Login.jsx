@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Logging in with:', { emailOrPhone, password });
+
+    // TODO: Add real authentication here
+    // After login, navigate to Home page
+    navigate('/home');
   };
 
   return (

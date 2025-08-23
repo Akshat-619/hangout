@@ -1,0 +1,15 @@
+.rightbar h3 {
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+.rightbar ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.rightbar li {
+  margin-bottom: 8px;
+  color: #ddd;
+}

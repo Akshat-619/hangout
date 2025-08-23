@@ -1,136 +1,41 @@
-/* Reset and base styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  background: #0d0d0d;
+/* Pages/Home/Home.css */
+
+.home-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0d0d0d, #111);
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
 }
 
-/* Circle layout container */
-.circle-layout {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-/* Central glowing core */
-.center-core {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: radial-gradient(circle, #00ffff22, #0d0d0d);
-  padding: 30px;
-  border-radius: 50%;
-  border: 2px solid #00ffff88;
-  box-shadow: 0 0 25px #00ffff88;
+/* Wrapper ensures isolation from internal component CSS */
+.sidebar-wrapper {
   width: 220px;
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-shrink: 0;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.05);
 }
 
-.center-core h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #00ffff;
-  text-shadow: 0 0 5px #00ffff99;
+.feed-wrapper {
+  flex: 1;
+  max-width: 700px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
 }
 
-.center-core .tagline {
-  font-size: 0.85rem;
-  color: #aaa;
-  margin-top: 10px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 3px #00ffff44;
-}
-
-/* Each service container styled */
-.circle-item {
-  position: absolute;
-  width: 160px;
-  padding: 14px 12px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  border-radius: 14px;
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid #00ffff33;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.08);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.circle-item:hover {
-  transform: translate(-50%, -55%) scale(1.07);
-  box-shadow: 0 0 24px rgba(0, 255, 255, 0.5);
-  border-color: #00ffffcc;
-}
-
-.circle-item .icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 8px;
-  font-size: 1.5rem;
-  line-height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00ffff55, #00d4d455);
-  color: #00ffff;
-  font-weight: bold;
-  text-shadow: 0 0 5px #00ffff;
-}
-
-.circle-item .title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 0 0 4px #00ffff22;
-}
-
-/* Positions for 9 services around the circle */
-.pos-1  { top: 10%;  left: 50%; }
-.pos-2  { top: 22%;  left: 75%; }
-.pos-3  { top: 50%;  left: 90%; }
-.pos-4  { top: 78%;  left: 75%; }
-.pos-5  { top: 90%;  left: 50%; }
-.pos-6  { top: 78%;  left: 25%; }
-.pos-7  { top: 50%;  left: 10%; }
-.pos-8  { top: 22%;  left: 25%; }
-.pos-9  { top: 50%;  left: 50%; transform: translate(-50%, -50%) scale(0); display: none; }
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .circle-item {
-    width: 120px;
-    padding: 10px;
-  }
-
-  .circle-item .icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
-    line-height: 36px;
-  }
-
-  .circle-item .title {
-    font-size: 0.8rem;
-  }
-
-  .center-core {
-    width: 160px;
-    height: 160px;
-    padding: 20px;
-  }
-
-  .center-core h1 {
-    font-size: 1.4rem;
-  }
-
-  .center-core .tagline {
-    font-size: 0.75rem;
-  }
+.rightbar-wrapper {
+  width: 220px;
+  flex-shrink: 0;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: -2px 0 10px rgba(0, 255, 255, 0.05);
 }

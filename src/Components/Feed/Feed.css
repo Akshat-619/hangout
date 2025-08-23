@@ -1,0 +1,45 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-card {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* 📐 keeps all images same proportion */
+  object-fit: cover;      /* ✂️ crop instead of stretch */
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+}
+
+.post-card-content {
+  flex: 1;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.post-card-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;   /* 👌 limit text lines */
+  -webkit-box-orient: vertical;
+}

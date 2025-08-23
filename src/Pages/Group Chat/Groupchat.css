@@ -1,0 +1,73 @@
+.groupchat-container {
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0d0d0d, #111);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.groupchat-container h2 {
+  margin-bottom: 30px;
+  color: #00ffff;
+}
+
+/* Grid of categories */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+/* Individual category card */
+.category-card {
+  background-color: #1a1a1a;
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,255,255,0.05);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+/* Icon in card */
+.category-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Card title */
+.category-card h3 {
+  margin-bottom: 15px;
+  color: #00ffff;
+}
+
+/* Card button */
+.category-card button {
+  padding: 8px 20px;
+  border: none;
+  background-color: #00ffff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.category-card button:hover {
+  background-color: #00cccc;
+}
+
+/* Ensure grid container doesn’t stretch beyond parent */
+.groupchat-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px; /* Prevents stretching too wide */
+  margin: 0 auto;
+}
